@@ -21,7 +21,8 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', core_views.Home, name='Home'),
-    path('EspRequest/', core_views.EspRequest, name='ESP')
+    path('Encender/', core_views.Encender, name='Encender'),
+    path('Apagar/', core_views.Apagar, name='Apagar')
 ]
 
 from django.conf.urls.static import static

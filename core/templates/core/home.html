@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energy Saving</title>
-</head>
-<body>
-    <p>Bienvenido a la pagina.</p>
-</body>
-</html>
+<!--Extension de la base -->
+{% extends 'core/base.html' %}
+
+<!--Contenido-->
+{% block content %}
+<div class="container content-center">
+    <button class="btn-info" onclick="Encender();">Encender</button>
+    <button class="btn-warning" onclick="Apagar();">Apagar</button>
+</div>
+{% endblock %}
