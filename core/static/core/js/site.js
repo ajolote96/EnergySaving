@@ -1,5 +1,5 @@
 
-var Encender = () => {
+function Encender(){
     $.ajax({
         url:"Encender",     
         data: { 'desc': "Todo bien" },
@@ -21,7 +21,7 @@ var Encender = () => {
      });
 }
 
-var Apagar = () =>{
+function Apagar(){
     $.ajax({
         url:"Apagar",     
         data: { 'desc': "Todo bien" },
@@ -39,6 +39,17 @@ var Apagar = () =>{
             } catch (ex) {
                 console.log(ex);
             }
+        }
+     });
+}
+
+function ActivarExperto(){
+    $.ajax({
+        url:"ActivarExperto",     
+        dataType: 'json',
+        type: 'GET',
+        success: (response) => {
+            console.log(response);
         }
      });
 }
