@@ -1,9 +1,13 @@
 from django.contrib import admin
-from .models import Registro
+from .models import RegistroMinuto, AutonomoConfig
 
 # Register your models here.
 
-class RegistroAdmin(admin.ModelAdmin):
-    readonly_fields = ('created', 'title')
+class RegistroMinutoAdmin(admin.ModelAdmin):
+    pass
 
-admin.site.register(Registro, RegistroAdmin)
+class AutonomoConfigAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(RegistroMinuto, RegistroMinutoAdmin)
+admin.site.register(AutonomoConfig, AutonomoConfigAdmin)

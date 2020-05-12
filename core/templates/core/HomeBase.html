@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>EnergySaving</title>
+        {% load static %}
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="{% static 'core/assets/img/favicon.ico' %}">
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- Third party plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'core/css/styles.css' %}" rel="stylesheet" />
+        <!-- Charts -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    </head>
+    <body id="page-top" onload="ActivarExperto(); Estado();">
+        <!-- Navigation-->         <!-- Masthead-->
+        {% include 'core/NavInicio.html' %}
+        <!-- Sobre EnergySaving section-->
+        {% include 'core/Sobre_EnergySaving.html' %}
+        <!-- Sistema section-->
+        {% include 'core/Sistema.html' %}
+        <!-- Proyecto section-->
+        {% include 'core/Proyecto.html' %}
+        <!-- Equipo section-->
+        {% include 'core/Equipo.html' %}
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container"><div class="small text-center text-muted">Energy Saving © 2020 - CUCEI UDG</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'core/js/scripts.js' %}"></script>
+        <script src="{% static 'core/js/site.js' %}"></script>
+        <script src="{% static 'core/js/Chart.js' %}"></script>
+    </body>
+</html>

@@ -9,8 +9,10 @@ urlpatterns = [
     path('Encender/', core_views.Encender, name='Encender'),
     path('Apagar/', core_views.Apagar, name='Apagar'),
     path('RecivirData/', core_views.RecivirData, name='RecivirData'),
-    path('ActivarExperto',core_views.ActivarExperto, name='Experto')
+    path('ActivarExperto/',core_views.ActivarExperto, name='Experto'),
+    path('Estado/', core_views.Estado, name='Estado')
 ]
+
 
 from django.conf.urls.static import static
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
