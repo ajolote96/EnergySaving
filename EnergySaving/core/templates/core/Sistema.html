@@ -1,0 +1,120 @@
+<section class="page-section bg-light" id="services">
+    <div class="container-fluid">
+        <div class="container-fluid">
+            <h2 class="text-center">Consumos totales y notas</h2>
+            <div class="card-deck m-3">
+                    <div class="card text-white bg-success" style="width: 18rem;">
+                        <div class="card-header">Consumo de hoy</div>
+                        <div class="card-body">
+                          <p class="card-text" id="ConsumoDia"></p>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-dark" style="width: 18rem;">
+                        <div class="card-header">Consumo total de ayer</div>  
+                        <div class="card-body">
+                            <p class="card-text" id="ConsumoAyer"></p>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-secondary" style="width: 18rem;">
+                        <div class="card-header">Consumo del mes</div>
+                        <div class="card-body">
+                          <p class="card-text" id="ConsumoMes"></p>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-info" style="width: 18rem;">
+                        <div class="card-header">Consumo total del mes pasado</div>  
+                        <div class="card-body">
+                            <p class="card-text" id="ConsumoMesPasado"></p>
+                        </div>
+                    </div>
+            </div>
+            <div class="card-deck m-3">
+                <div class="card mb-3" style="width: 18rem;" id="CardDia">
+                    <div class="card-header">Tu consumo energia de hoy comparado con  de ayer</div>
+                    <div class="card-body" id="CardDia_Body">
+                      <h5 class="card-title" id="CardDia_Title">Sistema experto trabajando</h5>
+                      <p class="card-text" id="CardDia_Text">Esperando un respuesta.</p>
+                    </div>
+                  </div>
+                  <div class="card mb-3" style="width: 18rem;" id="CardMes">
+                    <div class="card-header">Tu consumo energia de este mes comparado con el mes pasado.</div>
+                    <div class="card-body" id="CardMes_Body">
+                      <h5 class="card-title" id="CardMes_Title">Sistema experto trabajando</h5>
+                      <p class="card-text" id="CardMes_Text">Esperando un respuesta.</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="container">
+               <h5 class="text-center">Gastos de tu consumo</h5> 
+                <div class="d-flex">
+                    <ul class="list-group mx-auto justify-content-center">
+                        <li class="" id="Gasto1"></li>
+                        <li class="" id="Gasto2"></li>
+                    </ul>
+                </div>
+                <p class="h6 small text-center text-info text-s">Tarifa de 0.839 por cada Kwh segun la tarifa de <a href="https://app.cfe.mx/aplicaciones/ccfe/tarifas/tarifas/tarifas_casa.asp?Tarifa=DACTAR1&Anio=2020">CFE 2020</a></p>
+            </div>
+        </div>
+
+        <hr class="divider my-4" />
+
+        <!--Constrolador de dispositivo-->
+        <div class="container-fluid">
+            <h2 class="text-center">Constrolar dispositivo e información</h2>
+            <div class="row justify-content-center m-5">
+                <div class="col-3 p-5">
+                    <button type="button" class="btn btn-block btn-lg btn-info mb-3" onclick="Encender();">Encender</button>
+                    <button type="button" class="btn btn-block btn-lg btn-dark mb-3" onclick="Apagar();">Apagar</button>
+                </div>
+                <div class="col-5 card-deck">
+                    <div class="card mb-3 border-info" style="width: 18rem;" id="CardESP">
+                        <div class="card-header">Estado del dispositivo</div>
+                        <div class="card-body" id="CardESP_Body">
+                          <h5 class="card-title" id="CardESP_Title">Esperando una respuesta</h5>
+                          <p class="card-text" id="CardESP_Text">Tomará algunos segundos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 card-deck">
+                    <div class="card mb-3 border-info" style="width: 18rem;" id="CardHoras">
+                        <div class="card-header">Autonomia del dispositivo</div>
+                        <div class="card-body" id="CardHoras_Body">
+                          <h5 class="card-title" id="CardHoras_Title">Estado</h5>
+                          <ul class="h6 small text-info">
+                              <li>El sistema experto calcula las horas convenientes para el reposo.</li>
+                              <li>El calculo se basa en el dia de ayer.</li>
+                              <li>Esto ahorra energia de una manera automatica.</li>
+                              <li>Puedes desactivar/activar la función segun tus necesidades.</li>
+                          </ul>
+                          <p class="card-text" id="CardHoras_Horas"></p>
+                          <button type="button" class="btn btn-block btn-lg mb-3" id="CardHoras_Button" onclick="Estado('OK');">Esperando</button>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider my-4" />
+
+        <!--Graficaa-->
+        <div class="container-fluid">
+            <h2 class="text-center">Graficas de consumo Kwh en la semana</h2>
+            <div class="card-deck m-3">
+                <div class="card text-light bg-secondary" style="width: 18rem;">
+                    <div class="card-header">Consumo en las ultimas 24 horas</div>
+                    <div class="card-body">
+                        <canvas class="mt-3" id="ChartDia"></canvas>
+                        
+                    </div>
+                </div>
+                <div class="card text-light bg-secondary" style="width: 18rem;">
+                    <div class="card-header">Consumo de la semana</div>  
+                    <div class="card-body">
+                        <canvas class="mt-3" id="ChartSemana"></canvas>
+                    
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>
+</section>
