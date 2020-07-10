@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath EnergySaving EnergySaving.wsgi --log-file -
