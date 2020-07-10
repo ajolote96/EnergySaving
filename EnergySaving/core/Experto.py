@@ -1,7 +1,6 @@
 from experta import *
 from .models import RegistroMinuto, AutonomoConfig
 from datetime import datetime, timedelta
-
 #Declaracion de hechos, clases que heredan de Fact
 class RegistroWattsMinuto(Fact):
     pass
